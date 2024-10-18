@@ -6,7 +6,7 @@ function submitForm(e) {
     let email = document.querySelector('input[name="email"]').value;
 
     // Google Sheets integration
-    fetch('https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbw9VqSSFsz3VSPro5vtc51hEFqZE4bHzwqcf99wEanDERTxs68mAxja02qN3lMuK1ov4w/exec', {
         method: 'POST',
         mode: 'no-cors',
         cache: 'no-cache',
@@ -26,7 +26,7 @@ function submitForm(e) {
     document.querySelector('input[name="email"]').value = ''; // Clear the input field
 }
 function doPost(e) {
-    const sheet = SpreadsheetApp.openById('YOUR_SHEET_ID').getActiveSheet();
+    const sheet = SpreadsheetApp.openById('1oY1B0k6Om333lkQZLile15phzpERKEF-AVYTfGt9ra0').getActiveSheet();
     const data = JSON.parse(e.postData.contents);
     const email = data.email;
 
